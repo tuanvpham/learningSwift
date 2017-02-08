@@ -14,3 +14,9 @@ if population < 10000 {
 } else {
     message = "\(population) is pretty big"
 }
+
+//If-case 
+let age = 25
+if case 18...35 = age, age >= 21 {
+    print("Cool demographic")
+}
