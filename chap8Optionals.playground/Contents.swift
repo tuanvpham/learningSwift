@@ -5,7 +5,7 @@ import UIKit
 /* Optionals: an instance may not have a value.
  When using optionals, one of two things: either it has a value and it is ready for use, or it has no value (nil) */
 
-var errorCodeString: String?
+var errorCodeString: String?    //Question mark: optional variable
 errorCodeString = "404"
 print(errorCodeString)
 
@@ -34,5 +34,16 @@ print(errorCodeString)
 if let theError = errorCodeString {
     print(theError)
 }
+
+//Optional Chaining
+var errorDescription: String?
+var upCaseErrorDescription = errorDescription?.uppercased()
+/* The question mark signals that this line of code initiates the optional chaining process.
+If there is no value for errorDescription, upCaseErrorDescription is nil */
+
+//Nil Coalescing Operator
+let description = errorDescription ?? "No Error"
+/* The lefthand side of ?? must be an optional. If lefthand is nil, ?? returns the righthand side. If the lefthand is not nil, ?? returns the value contained in the optional */
+
 
 
